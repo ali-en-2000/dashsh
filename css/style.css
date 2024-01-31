@@ -240,6 +240,7 @@ nav {
     display: block;
     position: sticky;
     background-color: #fcfbfb;
+    margin-right: 5px;
     width: 100%;
     opacity: 1 !important;
     z-index: 100;
@@ -254,7 +255,9 @@ li {
     padding: 7px;
     opacity: .7;
 }
-
+.category>*:not(li){
+    width: 230px;
+}
 .slide {
     list-style: none;
 
