@@ -191,7 +191,7 @@ header svg {
     padding: 5px;
     border-radius: 45px;
     background-color: white;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 
 }
 
