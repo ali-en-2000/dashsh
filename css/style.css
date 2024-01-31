@@ -57,8 +57,12 @@ svg {
 header {
     display: flex;
     flex-wrap: wrap;
+    position: sticky;
+    top: 0;
     justify-content: space-between;
     padding: 10px 10px;
+    background-color: rgb(255, 255, 255);
+    z-index: 10;
 }
 
 header svg {
@@ -100,6 +104,10 @@ header svg {
     border-radius: 25px;
     box-shadow: rgba(100, 100, 111, 0.336) 0px 7px 29px 0px;
     transition: all 0.3s;
+    position: sticky;
+    top: 48px;
+    z-index: 11;
+
 }
 
 
