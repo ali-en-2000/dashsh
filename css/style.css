@@ -4,7 +4,7 @@
     font-weight: normal;
 }
 :root {
-    --base-color: #e6e6e62f;;
+    --base-color: #fbf9f9;;
     --font-color: #000000;
     --nave-hover-color : #3b94ed7e;
 
@@ -102,7 +102,7 @@ header svg {
 .main-content {
     width: 100%;
     display: flex;
-    height: 100vh;
+    height: calc(100vh - 45px);
     overflow: auto
 
 }
