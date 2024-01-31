@@ -71,7 +71,11 @@ header svg {
     gap: 5px;
     align-items: center;
 }
+.header__right-side--user_name{
+    bottom: 7px;
+    position: relative;
 
+}
 .header__left-side {
     display: flex;
     gap: 5px;
