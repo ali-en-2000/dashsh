@@ -47,7 +47,6 @@
             </svg>
         </div>
         <div id="header__right-side" onclick="toggleSidebar()">
-            <span class="header__right-side--user_name">Abdullah</span>
             <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium menu css-vubbuv" focusable="false" aria-hidden="true"
                 viewBox="0 0 24 24" data-testid="MenuIcon">
                 <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
@@ -83,7 +82,7 @@
             <nav>
                 <div class="category">
                     <span class="category-title first-nav">اصلی</span>
-                    <div class="category-link select" onclick="toggleSlide(this, 'no-child'),repeatVideoContainers()">
+                    <div class="category-link select" onclick="toggleSlide(this),repeatVideoContainers()">
                         <svg focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="DashboardIcon">
                             <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"></path>
                         </svg>
@@ -91,7 +90,7 @@
                     </div>
                     <span class="underline"></span>
                     <div class="category-link">
-                        <div class="sub-category " onclick="toggleSlide(this, 'with-child')">
+                        <div class="sub-category " onclick="toggleSlide(this)">
                             <div>
                                 <svg focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CodeIcon">
                                     <path
@@ -108,13 +107,13 @@
                             </div>
                         </div>
                         <ul class="slide dissactive">
-                            <li class="subcategory-link" onclick="toggleSlide(this, 'child'),changeContent('ehsan')"><a
-                                    href="#">احسان الله</a>
+                            <li class="subcategory-link" onclick="toggleSlide(this),changeContent('dev1')"><a
+                                    href="#">dev1</a>
                             </li>
-                            <li class="subcategory-link" onclick="toggleSlide(this, 'child'),changeContent('nasim')"><a
-                                    href="#">نسیم</a></li>
-                            <li class="subcategory-link" onclick="toggleSlide(this, 'child'),changeContent('mostafa')">
-                                <a href="#">مططفی</a>
+                            <li class="subcategory-link" onclick="toggleSlide(this),changeContent('dev2')"><a
+                                    href="#">dev2</a></li>
+                            <li class="subcategory-link" onclick="toggleSlide(this),changeContent('dev3')">
+                                <a href="#">dev3</a>
                             </li>
 
 
@@ -128,7 +127,7 @@
                 <div class="category">
                     <span class="category-title">تنظیمات</span>
 
-                    <div class="category-link" onclick="toggleSlide(this, 'no-child'),changeContent('setting')">
+                    <div class="category-link" onclick="toggleSlide(this),changeContent('setting')">
                         <svg focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="TuneIcon">
                             <path
                                 d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z">
@@ -139,7 +138,7 @@
                     <span class="underline"></span>
 
                     <div class="category-link">
-                        <div class="sub-category " onclick="toggleSlide(this, 'with-child')">
+                        <div class="sub-category " onclick="toggleSlide(this)">
                             <div>
                                 <svg focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="PaidIcon">
                                     <path
@@ -158,21 +157,21 @@
                         </div>
                         <ul class="slide dissactive">
                             <li class="subcategory-link"
-                                onclick="toggleSlide(this , 'child'),changeContent('abdolhamid')"><a
-                                    href="#">عبدالحمید</a>
+                                onclick="toggleSlide(this ),changeContent('account1')"><a
+                                    href="#">account1</a>
                             </li>
                             <li class="subcategory-link"
-                                onclick="toggleSlide(this, 'child'),changeContent('abdolrazagh')"><a
-                                    href="#">عبدالزاق</a>
+                                onclick="toggleSlide(this),changeContent('account2')"><a
+                                    href="#">account2</a>
                             </li>
-                            <li class="subcategory-link" onclick="toggleSlide(this, 'child'),changeContent('ahmad')"><a
-                                    href="#">احمد</a></li>
+                            <li class="subcategory-link" onclick="toggleSlide(this),changeContent('account3')"><a
+                                    href="#">account3</a></li>
 
                         </ul>
                     </div>
                     <span class="underline"></span>
 
-                    <div class="category-link" onclick="toggleSlide(this, 'no-child'),changeContent('backup')">
+                    <div class="category-link" onclick="toggleSlide(this),changeContent('backup')">
                         <svg focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="BackupIcon">
                             <path
                                 d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z">
@@ -221,17 +220,7 @@
     <script>
 
 
-        // chaneg main content
-        function changeContent(page) {
-            document.getElementById("mainContent").innerHTML = ''
-            fetch(`pages/${page}.html`)
-                .then(response => response.text())
-                .then(content => {
-                    document.getElementById("mainContent").innerHTML = content;
-                })
-                .catch(error => console.error('Error fetching content:', error));
 
-        }
 
 
     </script>
